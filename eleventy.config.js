@@ -11,15 +11,28 @@ const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
 const schema = require("@quasibit/eleventy-plugin-schema");
 const pluginTOC = require('eleventy-plugin-toc')
+const markdownIt = require('markdown-it')
+const markdownItAttrs = require('markdown-it-attrs')
 
 module.exports = function(eleventyConfig) {
+    
+	// Add attributes to the content 
+	const markdownItOptions = {
+		html: true,
+		breaks: true,
+		linkify: true
+	}
+	
+	const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs)
+	eleventyConfig.setLibrary('md', markdownLib)
+
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig.addPassthroughCopy({
 		"./public/": "/",
 		"./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css"
 	});
-
+    
 	
 
 	// Run Eleventy when these files change:

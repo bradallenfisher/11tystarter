@@ -58,7 +58,9 @@
 				</ul>
 			</nav>
 		</header>
-
+		{%- if featured_img %}
+        <img src="{{ featured_img }}" />
+		{%- endif %}
 		<main id="skip" class="content">
 			{{ content | safe }}
 		</main>

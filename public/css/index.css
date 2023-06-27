@@ -71,7 +71,10 @@ img {
 	width: 1px;
 }
 h1 {
-	font-size: 3em;
+  	font-size: 3em;
+}
+h2 {
+	font-size: 2.5em;
 }
 p:last-child {
 	margin-bottom: 0;
@@ -103,6 +106,7 @@ a[href]:active {
 main {
 	padding: 1rem;
 }
+
 main :first-child {
 	margin-top: 0;
 }
@@ -115,7 +119,9 @@ header:after {
 	display: table;
 	clear: both;
 }
-
+.toc {
+	margin:20px 0;
+}
 .links-nextprev {
 	list-style: none;
 	border-top: 1px dashed var(--color-gray-20);
