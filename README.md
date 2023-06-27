@@ -13,7 +13,7 @@ cd my-blog-name
 2. Clone this Repository
 
 ```
-git clone https://git@github.com:bradallenfisher/11tystarter.git .
+git clone git@github.com:bradallenfisher/11tystarter.git .
 ```
 
 _Optional:_ Review `eleventy.config.js` and `_data/metadata.js` to configure the site’s options and data.
