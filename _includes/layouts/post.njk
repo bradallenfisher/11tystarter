@@ -8,7 +8,7 @@ layout: layouts/base.njk
 <h1>{{ title }}</h1>
 
 <ul class="post-metadata">
-	<li>By Grant Garab</li> \
+	<li>By <a href="/about/index.html">Grant Garab</a></li> \
 	<li>Published Date: <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
 </ul>
 <p class="excerpt">{{ description or metadata.description }}</p>
@@ -16,7 +16,7 @@ layout: layouts/base.njk
 <h2 id="table-of-contents">Table of Contents</h2>
 {{ content | toc | safe }}
 {{ content | safe }}
-<h2>Tags:</h2>
+<h2>Tags:</h2>		
 <ul>
 	{%- for tag in tags | filterTagList %}
 	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}

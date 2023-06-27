@@ -45,7 +45,11 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginDrafts);
 	eleventyConfig.addPlugin(pluginImages);
     eleventyConfig.addPlugin(schema);
-	eleventyConfig.addPlugin(pluginTOC)
+	eleventyConfig.addPlugin(pluginTOC, {
+		tags: ['h2', 'h3'],
+		wrapper: 'div',
+		ul: 'true'
+	  });
 	
 	
 	// Official plugins

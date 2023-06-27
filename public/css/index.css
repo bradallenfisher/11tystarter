@@ -13,8 +13,8 @@
 	--background-color: #fff;
 
 	--text-color: var(--color-gray-90);
-	--text-color-link: #fea324;
-	--text-color-link-active: #5f2b48;
+	--text-color-link: #1e1b51;
+	--text-color-link-active: #ab3900;
 	--text-color-link-visited: #17050F;
 
 	--syntax-tab-size: 2;
@@ -59,6 +59,7 @@ main.content {
 img {
 	width: 100%;
 	max-width: 100%;
+	border-left: 10px solid #ab3900;
 }
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden {
@@ -87,6 +88,19 @@ p.excerpt {
 	font-size: 1.4em;
 	font-weight: 300;
 }
+ul ul {
+	padding-inline-start: 10px;
+}
+.toc ul li {
+  line-height: 1.7;
+}
+.toc li {
+	font-size: 1.2rem;
+}
+.toc a[href] {
+	font-weight: 300;
+}
+
 li {
 	line-height: 1.5;
 	padding: 0 10px;
@@ -94,6 +108,7 @@ li {
 
 a[href] {
 	color: var(--text-color-link);
+	font-weight: bold;
 }
 a[href]:visited {
 	color: var(--text-color-link-visited);
@@ -121,6 +136,8 @@ header:after {
 }
 .toc {
 	margin:20px 0;
+}
+.archive-list-left {
 }
 .links-nextprev {
 	list-style: none;
@@ -198,15 +215,26 @@ header {
 .postlist {
 	list-style: none;
 	padding: 0;
-	padding-left: 1.5rem;
 }
 .postlist-item {
 	display: flex;
-	flex-wrap: wrap;
-	align-items: baseline;
-	counter-increment: start-from -1;
+	align-items: center;
 	margin-bottom: 1em;
 }
+.archive-list-left {
+	padding: 20px;
+	width: 32%;
+}
+.archive-list-right {
+	padding: 20px;
+	width: 68%;
+}
+
+.archive-list-left img {
+	width: 100%;
+	display: block;
+}
+/**
 .postlist-item:before {
 	display: inline-block;
 	pointer-events: none;
@@ -215,6 +243,7 @@ header {
 	text-align: right;
 	margin-left: -1.5rem;
 }
+**/
 .postlist-date,
 .postlist-item:before {
 	font-size: 0.8125em; /* 13px /16 */
@@ -223,8 +252,10 @@ header {
 .postlist-date {
 	word-spacing: -0.5px;
 }
+/*
+
 .postlist-link {
-	font-size: 1.1875em; /* 19px /16 */
+	font-size: 1.1875em;
 	font-weight: 700;
 	flex-basis: calc(100% - 1.5rem);
 	padding-left: .25em;
@@ -233,6 +264,8 @@ header {
 	text-underline-offset: 0;
 	text-decoration-thickness: 1px;
 }
+*/
+
 .postlist-item-active .postlist-link {
 	font-weight: bold;
 }
